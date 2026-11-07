@@ -182,8 +182,8 @@ Abre una terminal nueva y repite los cuatro comandos de la tabla. Si falla algun
 1. Clona la rama `starter` para realizar el taller. Ejecuta desde una terminal:
 
 ```sh
-git clone --branch starter https://github.com/mayrascript/multiagent-adk-workshop.git multiagent-adk-workshop
-cd multiagent-adk-workshop
+git clone --branch starter https://github.com/mayrascript/golden-rentals-studio.git golden-rentals-studio
+cd golden-rentals-studio
 ```
 
    El proyecto está en la raíz de la carpeta clonada. Si descargas un ZIP desde GitHub, selecciona primero la rama starter. Para consultar la solución completa con comentarios, abre la rama main.
@@ -205,7 +205,7 @@ Abre la dirección que imprima el servidor. La rama starter usa el puerto 4319; 
 Para ejecutar la solución sin modificar tus ejercicios, clónala en una carpeta distinta:
 
 ```sh
-git clone --branch main https://github.com/mayrascript/multiagent-adk-workshop.git golden-rentals-solution
+git clone --branch main https://github.com/mayrascript/golden-rentals-studio.git golden-rentals-solution
 cd golden-rentals-solution
 pnpm install --frozen-lockfile
 pnpm dev

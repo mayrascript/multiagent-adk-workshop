@@ -4,10 +4,10 @@ Objetivo: comprender el límite entre un concepto visual y una imagen generada. 
 
 ## Pasos
 
-1. Localiza `imageParameters` y `generate_campaign_image` en [03-tools.ts](../../workshop/exercises/03-tools.ts).
-2. Sigue la implementación en [adk.ts](../../packages/providers/adk.ts): valida la pieza y reserva consumo; delega la solicitud, la extracción y el guardado en [05-images.ts](../../workshop/exercises/05-images.ts).
+1. Localiza `imageParameters` y `generate_campaign_image` en [03-tools.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/workshop/exercises/03-tools.ts).
+2. Sigue la implementación en [adk.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/packages/providers/adk.ts): valida la pieza y reserva consumo; delega la solicitud, la extracción y el guardado en [05-images.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/workshop/exercises/05-images.ts).
 3. Observa los metadatos: archivo relativo, tipo, dimensiones, versión, modelo, checksum y aviso de imagen generada.
-4. Compara con la ilustración SVG de [simulated.ts](../../packages/providers/simulated.ts). Es un activo de prueba original y se identifica como tal.
+4. Compara con la ilustración SVG de [simulated.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/packages/providers/simulated.ts). Es un activo de prueba original y se identifica como tal.
 5. Desde la web genera otra imagen para una sola pieza. Comprueba que las otras se mantienen y que esa pieza vuelve a requerir revisión.
 
 En el flujo real el Diseñador llama a la herramienta. La regeneración explícita reutiliza la escena del concepto guardado y llama a la misma función desde el workflow. La dirección fotográfica central tiene prioridad sobre estilos antiguos de ilustración, también al regenerar campañas existentes. Las imágenes se guardan en el almacenamiento local de la aplicación.
