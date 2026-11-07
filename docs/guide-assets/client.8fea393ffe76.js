@@ -139,4 +139,60 @@ sidebar.addEventListener('click', event => {
 });
 window.addEventListener('hashchange', () => render(true));
 render();
+// Solo lectura pública: nunca se suman estrellas localmente ni se pide una clave.
+const starLinks = [...document.querySelectorAll('[data-repo-star]')];
+const starCacheKey = 'mayrascript-workshop-stars-v1';
+const starCacheTtl = 60_000;
+let starsCheckedAt = 0;
+let starsLoading = false;
+const validStarCount = (value) => typeof value === 'number' && Number.isSafeInteger(value) && value >= 0;
+function showStars(count) {
+    const formatted = new Intl.NumberFormat('es').format(count);
+    for (const link of starLinks) {
+        const badge = link.querySelector('[data-star-count]');
+        badge.textContent = formatted;
+        badge.hidden = false;
+        link.setAttribute('aria-label', `Dale una estrella a la guía en GitHub · ${formatted} ${count === 1 ? 'estrella' : 'estrellas'} (abre una pestaña nueva)`);
+    }
+}
+try {
+    const cached = JSON.parse(sessionStorage.getItem(starCacheKey) ?? 'null');
+    if (cached && validStarCount(cached.count) && typeof cached.at === 'number' && cached.at <= Date.now() && Date.now() - cached.at < starCacheTtl) {
+        showStars(cached.count);
+        starsCheckedAt = cached.at;
+    }
+}
+catch { /* Guardar el contador es opcional. */ }
+async function refreshStars() {
+    if (!starLinks.length || starsLoading || Date.now() - starsCheckedAt < starCacheTtl)
+        return;
+    starsLoading = true;
+    starsCheckedAt = Date.now();
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 5000);
+    try {
+        const response = await fetch('https://api.github.com/repos/mayrascript/multiagent-adk-workshop', {
+            headers: { Accept: 'application/vnd.github+json' },
+            credentials: 'omit', referrerPolicy: 'no-referrer', signal: controller.signal,
+        });
+        if (!response.ok)
+            return;
+        const data = await response.json();
+        if (!data || typeof data !== 'object' || !('stargazers_count' in data) || !validStarCount(data.stargazers_count))
+            return;
+        showStars(data.stargazers_count);
+        try {
+            sessionStorage.setItem(starCacheKey, JSON.stringify({ count: data.stargazers_count, at: Date.now() }));
+        }
+        catch { /* Sin almacenamiento, el enlace funciona igual. */ }
+    }
+    catch { /* Sin red o con límite de GitHub, conservamos el enlace y cualquier cifra ya cargada. */ }
+    finally {
+        window.clearTimeout(timeout);
+        starsLoading = false;
+    }
+}
+void refreshStars();
+// Volver desde GitHub actualiza la cifra sin recargar la guía ni perder progreso.
+window.addEventListener('focus', () => { void refreshStars(); });
 export {};
