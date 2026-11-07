@@ -6,8 +6,8 @@ export const illustrations = {
     label: 'foto de Mayra Rodríguez',
   },
   'workshop-architecture.png': {
-    width: 2048, height: 1152,
-    caption: 'Arquitectura del proyecto en TypeScript.',
+    width: 1672, height: 941,
+    caption: 'Arquitectura de Golden Rentals Studio: Angular, TypeScript y Google ADK.',
     label: 'diagrama de arquitectura',
   },
   'agent-avatars.png': {

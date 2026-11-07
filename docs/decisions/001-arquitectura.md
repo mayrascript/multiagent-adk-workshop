@@ -4,11 +4,11 @@ Fecha: 5 de noviembre de 2026. Decisión: implementar el workshop en TypeScript 
 
 ## Objetivo
 
-Una experiencia educativa con una interfaz React, un servidor Node.js y cuatro agentes de Google ADK dentro del mismo proceso. Un único paquete y lockfile reducen pasos de instalación; las carpetas mantienen separados los contratos, proveedores y persistencia.
+Una experiencia educativa con una interfaz Angular, un servidor Node.js y cuatro agentes de Google ADK dentro del mismo proceso. Un único paquete y lockfile reducen pasos de instalación; las carpetas mantienen separados los contratos, proveedores y persistencia.
 
 ## Decisiones
 
-- Express atiende la API y Vite sirve la interfaz durante el desarrollo. La compilación produce interfaz estática y servidor JavaScript.
+- Express atiende la API y Angular CLI sirve la interfaz durante el desarrollo. La compilación produce interfaz estática y servidor JavaScript.
 - ADK oficial `@google/adk` y `@google/adk-devtools`, con versiones exactas y lockfile. No se usa un paquete comunitario llamado ADK-TS.
 - Modelos aceptados por la organizadora: `gemini-3.8-flash` para los cuatro agentes y `gemini-3.1-flash-image` (Nano Banana 2) para imágenes cuadradas `1K`. Se mantienen identificadores estables explícitos en `.env.example`, con modo simulado por defecto. Los agentes usan razonamiento `LOW`, sin parámetros de muestreo incompatibles, y las continuaciones automáticas del SDK están desactivadas. La prueba de transporte local no reemplaza la validación con la cuenta real. Referencias: [Flash 3.8](https://ai.google.dev/gemini-api/docs/latest-model), [imágenes](https://ai.google.dev/gemini-api/docs/image-generation).
 - Zod valida las entradas y salidas en ejecución; TypeScript comprueba el código durante el desarrollo.

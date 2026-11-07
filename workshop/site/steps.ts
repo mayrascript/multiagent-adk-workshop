@@ -1,5 +1,5 @@
 export const projectRepository = 'https://github.com/mayrascript/golden-rentals-studio';
-export const projectVersion = 'workshop-v1';
+export const projectVersion = 'workshop-v2-angular';
 export const repository = 'https://github.com/mayrascript/multiagent-adk-workshop';
 export const notionGuide = 'https://app.notion.com/p/410f59a74a4e8141a98ccc9b3e160c55';
 export const siteUrl = 'https://mayrascript.github.io/multiagent-adk-workshop/';

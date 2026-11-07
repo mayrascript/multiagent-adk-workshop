@@ -48,3 +48,7 @@ Si cambias una explicación que también aparece en Notion, actualiza allí el b
 ## Repositorios separados
 
 La app, los agentes y los ejercicios viven en https://github.com/mayrascript/golden-rentals-studio. `projectRepository` define los enlaces a `starter` y `main`; `repository` apunta a las fuentes editoriales de esta guía. Las pruebas verifican el inventario explícito de 14 TODO sin importar código de la aplicación. Al actualizar una edición, revisa sus ejemplos contra el proyecto y actualiza la referencia de versión.
+
+## Arquitectura Angular
+
+La edición Angular usa el diagrama actualizado con fondo marfil, servidor violeta, conectores cian y acento coral de MayraScript. El texto y las relaciones describen Angular → API local → workflow TypeScript → cuatro agentes ADK. Las llamadas de los cuatro agentes al modelo de texto se representan de forma compartida. Las etiquetas `workshop-v2-angular-starter` y `workshop-v2-angular-solution` del proyecto identifican esta edición.
