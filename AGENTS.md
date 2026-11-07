@@ -16,5 +16,9 @@ código. Comprueba `pnpm guide:build`, `pnpm typecheck` y las pruebas de la guí
 La salida pública vive en `docs/` y debe actualizarse junto con las fuentes.
 
 MayraScript identifica a la autora y el workshop. Golden Rentals es el caso
-ficticio: conserva sus datos y la skill didáctica `skills/instagram-copy/`.
+ficticio: conserva sus datos y la skill didáctica `skills/instagram-copy/` del repositorio golden-rentals-studio.
 Nunca incluyas `.env`, credenciales ni campañas personales en el sitio público.
+
+## Separación del proyecto
+
+Este repositorio contiene sólo la guía. La aplicación y los ejercicios viven en https://github.com/mayrascript/golden-rentals-studio. Usa projectRepository en workshop/site/steps.ts para enlaces de código y repository para enlaces editoriales. No añadas dependencias de la aplicación para compilar la guía. El inventario de TODO está en workshop/site/exercises.json.

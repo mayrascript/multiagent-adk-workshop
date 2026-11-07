@@ -11,10 +11,10 @@ Objetivo: practicar edición, aprobación y exportación de una versión concret
 5. Vuelve a una pieza, cambia una frase y guarda. Comprueba que la aprobación de esa pieza y la global se invalidan.
 6. Descarga un borrador y verifica su estado `DRAFT`. La descarga no publica contenido.
 
-Lee [export.ts](../../apps/server/src/api/export.ts) para entender el manifiesto y las sumas de verificación. El CSV escapa comillas y neutraliza valores que podrían interpretarse como fórmulas.
+Lee [export.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/apps/server/src/api/export.ts) para entender el manifiesto y las sumas de verificación. El CSV escapa comillas y neutraliza valores que podrían interpretarse como fórmulas.
 
 ## Checkpoint
 
-Ejecuta `pnpm demo:validate` y `pnpm test`. Las pruebas cubren versiones obsoletas, aprobación, exportación y cambios de calendario. Las pruebas de [interfaz](../../tests/e2e/workshop.spec.ts) recorren el mismo flujo en navegador.
+Ejecuta `pnpm demo:validate` y `pnpm test`. Las pruebas cubren versiones obsoletas, aprobación, exportación y cambios de calendario. Las pruebas de [interfaz](https://github.com/mayrascript/golden-rentals-studio/blob/main/tests/e2e/workshop.spec.ts) recorren el mismo flujo en navegador.
 
 Error frecuente: intentar aprobar una versión que cambió en otra pestaña. La aplicación rechaza esa aprobación; recarga y revisa la versión actual.

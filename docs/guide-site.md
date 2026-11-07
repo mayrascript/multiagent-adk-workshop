@@ -44,3 +44,7 @@ Si cambias una explicación que también aparece en Notion, actualiza allí el b
 - Se muestran tiempos estimados por sección. Por decisión de la organizadora, se conserva el progreso local sencillo; no se añaden login, seguimiento por bloque ni almacenamiento de participantes.
 - El enlace de feedback abre Google Forms, sin recogida de correos ni límite de una respuesta. El formulario no identifica finalizadores; la facilitadora valida el cierre en 30–60 segundos por persona o equipo.
 - `pnpm workshop:web --allow-paid-generation --budget-usd=IMPORTE` inicia el laboratorio ADK Web local. Se cargan los ejercicios del participante y las imágenes pueden aparecer como artefactos. El presupuesto acumulado es independiente del laboratorio CLI.
+
+## Repositorios separados
+
+La app, los agentes y los ejercicios viven en https://github.com/mayrascript/golden-rentals-studio. `projectRepository` define los enlaces a `starter` y `main`; `repository` apunta a las fuentes editoriales de esta guía. Las pruebas verifican el inventario explícito de 14 TODO sin importar código de la aplicación. Al actualizar una edición, revisa sus ejemplos contra el proyecto y actualiza la referencia de versión.

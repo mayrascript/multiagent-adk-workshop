@@ -12,10 +12,10 @@ Antes de continuar, completa [los requisitos iniciales y la instalación de Node
 4. Pulsa Crear mi campaña. Observa las cuatro etapas y las tres ilustraciones identificadas como simuladas.
 5. Abre el calendario. Comprueba que hay tres fechas dentro de siete días y una zona horaria explícita.
 
-La simulación usa [SimulatedProvider](../../packages/providers/simulated.ts). Sus textos son plantillas y sus imágenes son SVG generados por código. No representa respuestas de un modelo.
+La simulación usa [SimulatedProvider](https://github.com/mayrascript/golden-rentals-studio/blob/main/packages/providers/simulated.ts). Sus textos son plantillas y sus imágenes son SVG generados por código. No representa respuestas de un modelo.
 
 ## Checkpoint
 
-Ejecuta `pnpm demo:validate`. Debe confirmar tres piezas, tres imágenes, calendario, aprobación y ZIP, sin llamadas externas. El código de la comprobación está en [validate-demo.ts](../../scripts/validate-demo.ts).
+Ejecuta `pnpm demo:validate`. Debe confirmar tres piezas, tres imágenes, calendario, aprobación y ZIP, sin llamadas externas. El código de la comprobación está en [validate-demo.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/scripts/validate-demo.ts).
 
 Si el servidor no arranca, revisa Node.js y el puerto. Si ves un error de credenciales, comprueba que `GENERATION_MODE` esté en `simulated`. Configura tus propios valores en `.env` cuando actives el modo real.

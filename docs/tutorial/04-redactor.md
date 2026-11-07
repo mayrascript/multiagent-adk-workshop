@@ -4,8 +4,8 @@ Objetivo: separar instrucciones de escritura reutilizables de la lógica de ejec
 
 ## Pasos
 
-1. Lee [SKILL.md](../../skills/instagram-copy/SKILL.md) y su [recurso de estructuras](../../skills/instagram-copy/references/estructuras.md).
-2. Localiza `loadSkillFromDir` y `SkillToolset` en [04-skills.ts](../../workshop/exercises/04-skills.ts). El nombre del directorio coincide con el nombre del frontmatter.
+1. Lee [SKILL.md](https://github.com/mayrascript/golden-rentals-studio/blob/main/skills/instagram-copy/SKILL.md) y su [recurso de estructuras](https://github.com/mayrascript/golden-rentals-studio/blob/main/skills/instagram-copy/references/estructuras.md).
+2. Localiza `loadSkillFromDir` y `SkillToolset` en [04-skills.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/workshop/exercises/04-skills.ts). El nombre del directorio coincide con el nombre del frontmatter.
 3. Revisa cómo el Redactor recibe la estrategia, usa `factIds` y devuelve gancho, cuerpo, CTA y hashtags.
 4. Observa la lista permitida de herramientas: carga de la skill y de su recurso. No se permite ejecutar scripts del participante.
 5. Cambia un criterio de escritura en la skill. Conserva las restricciones sobre datos y el formato de salida.

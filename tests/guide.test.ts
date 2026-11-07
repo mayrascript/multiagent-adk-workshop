@@ -1,6 +1,7 @@
 import { expect, it } from 'vitest';
 import { readFile } from 'node:fs/promises';
 import { guideHref, renderGuideMarkdown } from '../workshop/site/render.js';
+import exercises from '../workshop/site/exercises.json' with { type: 'json' };
 import { steps } from '../workshop/site/steps.js';
 
 it('enlaza todos los módulos locales de la guía con rutas de la web', async () => {
@@ -41,10 +42,9 @@ it('incluye los 14 TODO con sus fragmentos de solución en la guía generada', a
   for (const step of steps) {
     if (!('exercise' in step)) continue;
     const markdown = await readFile(`workshop/guide/${step.file}`, 'utf8');
-    const source = await readFile(`workshop/solution/${step.exercise}`, 'utf8');
-    for (const match of source.matchAll(/@solution:start ([\d.]+)/g)) {
-      expect(markdown).toContain(`### TODO ${match[1]}`);
-      expect(renderGuideMarkdown(markdown)).toContain(`TODO ${match[1]}</h3>`);
+    for (const id of exercises[step.exercise]) {
+      expect(markdown).toContain(`### TODO ${id}`);
+      expect(renderGuideMarkdown(markdown)).toContain(`TODO ${id}</h3>`);
       total++;
     }
   }

@@ -14,6 +14,10 @@ El caso práctico es **Golden Rentals**, una marca ficticia de alojamientos. El 
 >
 > Me encuentras como **@mayrascript**. [Conoce más en MayraScript ↗](https://mayrascript.com/)
 
+## El proyecto del taller
+
+La aplicación, los agentes y los ejercicios están en [Golden Rentals Studio](https://github.com/mayrascript/golden-rentals-studio). Este repositorio contiene la explicación paso a paso. Clona `starter` para practicar o consulta `main` para ver la solución. La edición inicial de esta guía corresponde a las etiquetas `workshop-v1-starter` y `workshop-v1-solution` del proyecto.
+
 ## Requisitos iniciales
 
 Antes de empezar, instala **Node.js 24 LTS** (24.13.0 o posterior), **npm** (incluido con Node.js) **pnpm 11.25.0** y **Git**. Necesitarás una terminal, un editor de código y conexión a Internet para la instalación.

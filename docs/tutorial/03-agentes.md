@@ -4,10 +4,10 @@ Objetivo: reconocer un agente ADK y validar su salida. Necesitas entender funcio
 
 ## Pasos
 
-1. Abre [team.ts](../../apps/server/src/agents/team.ts) y sigue su exportación a [07-workflow.ts](../../workshop/exercises/07-workflow.ts). La fábrica reúne cuatro agentes definidos en los archivos de ejercicios.
-2. Abre [02-strategist.ts](../../workshop/exercises/02-strategist.ts) e identifica el nombre, modelo e instrucción del Estratega. La configuración compartida está en workshop/support.ts. El modelo se configura en el servidor; el navegador no recibe la clave.
-3. Lee `strategySchema` en [contracts](../../packages/contracts/index.ts). La salida contiene un resumen y exactamente tres ángulos.
-4. Sigue `strategy` en [adk.ts](../../packages/providers/adk.ts): el Runner crea una sesión aislada, recoge la salida y el contrato la valida.
+1. Abre [team.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/apps/server/src/agents/team.ts) y sigue su exportación a [07-workflow.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/workshop/exercises/07-workflow.ts). La fábrica reúne cuatro agentes definidos en los archivos de ejercicios.
+2. Abre [02-strategist.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/workshop/exercises/02-strategist.ts) e identifica el nombre, modelo e instrucción del Estratega. La configuración compartida está en workshop/support.ts. El modelo se configura en el servidor; el navegador no recibe la clave.
+3. Lee `strategySchema` en [contracts](https://github.com/mayrascript/golden-rentals-studio/blob/main/packages/contracts/index.ts). La salida contiene un resumen y exactamente tres ángulos.
+4. Sigue `strategy` en [adk.ts](https://github.com/mayrascript/golden-rentals-studio/blob/main/packages/providers/adk.ts): el Runner crea una sesión aislada, recoge la salida y el contrato la valida.
 5. Compara con `strategy` en el proveedor simulado. Comparten forma de salida; solo el modo real invoca ADK.
 
 Un agente combina modelo e instrucciones y puede disponer de herramientas. Una herramienta ejecuta una operación delimitada. Una skill contiene conocimiento reutilizable. El workflow decide los pasos del proceso. La aprobación humana es un cambio de estado realizado desde la interfaz.
