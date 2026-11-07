@@ -16,7 +16,7 @@ El caso práctico es **Golden Rentals**, una marca ficticia de alojamientos. El 
 
 ## El proyecto del taller
 
-La aplicación, los agentes y los ejercicios están en [Golden Rentals Studio](https://github.com/mayrascript/golden-rentals-studio). Este repositorio contiene la explicación paso a paso. Clona `starter` para practicar o consulta `main` para ver la solución. La edición inicial de esta guía corresponde a las etiquetas `workshop-v1-starter` y `workshop-v1-solution` del proyecto.
+La aplicación, los agentes y los ejercicios están en [Golden Rentals Studio](https://github.com/mayrascript/golden-rentals-studio). Este repositorio contiene la explicación paso a paso. Clona `starter` para practicar o consulta `main` para ver la solución. Esta edición Angular de la guía corresponde a las etiquetas `workshop-v2-angular-starter` y `workshop-v2-angular-solution` del proyecto.
 
 ## Requisitos iniciales
 
@@ -44,7 +44,7 @@ El **workflow del backend** coordina el orden, pasa el contexto y aplica límite
 
 ## Así se conecta el equipo
 
-![El participante usa React para enviar un brief al workflow local. El servidor TypeScript coordina cuatro agentes ADK: Estratega, Redactor con una skill, Diseñador con una tool de imágenes y Editor. En modo real, los cuatro usan el modelo de texto de Gemini; la tool usa el modelo de imágenes y guarda archivos localmente.](../assets/workshop-architecture.png)
+![El participante usa Angular para enviar un brief al workflow local. El servidor TypeScript coordina cuatro agentes ADK: Estratega, Redactor con una skill, Diseñador con una tool de imágenes y Editor. En modo real, los cuatro usan el modelo de texto de Gemini; la tool usa el modelo de imágenes y guarda archivos localmente.](../assets/workshop-architecture.png)
 
 <details>
 <summary>Leer el diagrama paso a paso</summary>

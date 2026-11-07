@@ -16,7 +16,7 @@ pnpm workshop:check setup
 pnpm dev
 ```
 
-Sigue la [preparación](workshop/guide/01-preparacion.md) para instalar las herramientas. En el nuevo repositorio, `starter` contiene los 14 TODO y `main` la solución completa. Las etiquetas `workshop-v1-starter` y `workshop-v1-solution` conservan la versión inicial de esta edición.
+Sigue la [preparación](workshop/guide/01-preparacion.md) para instalar las herramientas. En el nuevo repositorio, `starter` contiene los 14 TODO y `main` la solución completa. Las etiquetas `workshop-v2-angular-starter` y `workshop-v2-angular-solution` conservan la versión Angular de esta edición.
 
 ## Para mantener la explicación
 

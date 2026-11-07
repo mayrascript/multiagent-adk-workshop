@@ -1,23 +1,8 @@
-Use case: infographic-diagram. Create a technically accurate architecture diagram for a Spanish TypeScript workshop. Use an opaque white background, landscape 2048x1152 or similar, and very legible Spanish labels. Use a blue rounded system boundary, pale agent cards, clean icons and orthogonal labeled arrows. Keep the layout spacious and readable.
-
-Exact top title: "Tu próximo equipo no es humano"
-Exact subtitle: "Workshop de orquestación de agentes con Google ADK"
-Small heading: "Arquitectura local · TypeScript"
-
-Main left-to-right structure:
-1. Far left outside server boundary: "Participante" and a box "Interfaz React" with "Brief · revisión humana · descarga". Bidirectional arrow between UI and workflow labeled "API local".
-2. Large blue system boundary named "Servidor local · Node.js + TypeScript". Inside left a pale box "Workflow TypeScript" subtitle "Coordina etapas, contexto y límites". This is deterministic code, NOT an LLM agent. Fan-out bidirectional solid arrows from this box to exactly four vertically stacked agent cards inside the server boundary:
-"Estratega" / "Brief → tres ángulos"
-"Redactor" / "Estrategia → tres textos"
-"Diseñador" / "Conceptos → tool de imágenes"
-"Editor" / "Revisión textual + calendario"
-Above this four-card column label "Agentes con Google ADK".
-3. Within server boundary to the right of agent cards, resources:
-"Skill de Instagram" / "Instrucciones y recursos" connected ONLY to Redactor.
-"Tool de imágenes" / "Genera y guarda" connected ONLY to Diseñador.
-"Archivos locales" / "Campañas e imágenes" connected to workflow for persistence and to image tool for saving.
-4. Outside server boundary on far right, separate pale group titled "API de Gemini · modo real". Exactly two nodes: "Modelo de texto" and "Modelo de imágenes". A dashed shared bus from agent group to Modelo de texto means four agents call Gemini text via ADK. Tool de imágenes connects to Modelo de imágenes, never a direct browser/provider link. Avoid overlapping arrow labels and text. Arrows must clearly indicate roles rather than imply automatic handoffs between agents.
-Bottom two short annotation strips:
-"Modo simulado: sin llamadas a Gemini. La revisión visual y la aprobación final son humanas."
-"Extensiones posibles: A2A · MCP · Cloud Run (no implementadas en esta edición)"
-Avoid: Creative Director LLM, Project Manager as fifth agent, Google Search, Cloud Storage, GCS, Secret Manager, Agent Runtime, Cloud Run boxes within implemented architecture; no Golden Rentals title, no exact model versions, no extra agents, no keys or credentials. Use Spanish diacritics accurately, big headings, concise text. Professional technical documentation style, not illustrated cartoon.
+Edit the supplied architecture infographic for the MayraScript workshop, preserving its accurate topology while completely redesigning the graphic with MayraScript branding. Replace React icon/text with Angular (Angular shield icon; exact label "Interfaz Angular"). Landscape 2048x1152 or larger 16:9, opaque background. Elegant crisp technical infographic. Warm ivory #f9f6f0 background, dark plum #211333 text, very dark violet server boundary hsl(256 70% 8%), violet card outlines, ivory/light-lavender agent cards, cyan connectors and restrained coral-to-pink accent on Angular and header rule. IBM Plex Mono style headings with clean sans body, large legible Spanish typography, no tiny text. MayraScript wordmark as text only in corner, do not invent an isotipo. No blue dominant palette.
+Title "Tu próximo equipo no es humano", subtitle "Workshop de orquestación de agentes con Google ADK", small "Arquitectura local · TypeScript".
+Left outside server: "Participante" linked bidirectionally to "Interfaz Angular" / "Brief · revisión humana · descarga". Angular links via "API local" to "Workflow TypeScript" / "Coordina etapas, contexto y límites" inside "Servidor local · Node.js + TypeScript".
+Exactly four agent cards inside server, group title "Agentes con Google ADK": "Estratega" / "Brief → tres ángulos"; "Redactor" / "Estrategia → tres textos"; "Diseñador" / "Conceptos → tool de imágenes"; "Editor" / "Revisión textual + calendario". Workflow connects to each. This workflow is code, not a fifth agent.
+Resources inside server: "Skill de Instagram" / "Instrucciones y recursos", connected only to Redactor. "Tool de imágenes" / "Genera y guarda", connected only to Diseñador; "Archivos locales" / "Campañas e imágenes" connected to workflow and image tool.
+Outside right server: "API de Gemini · modo real" with "Modelo de texto" and "Modelo de imágenes". Shared dashed connector from four-agent GROUP to text model labelled "Llamadas vía ADK" (must represent all four, not only Estratega). Image tool connects to image model. Never browser directly to Gemini.
+Bottom notes: "Modo simulado: sin llamadas a Gemini. Revisión visual y aprobación final: humanas." and "Extensiones posibles: A2A · MCP · Cloud Run (no implementadas)".
+No overlapping labels, clear aligned blocks and orthogonal connectors, accurate accented Spanish. All nodes preserved, no added infrastructure.

@@ -31,7 +31,7 @@ El alcance confirmado es una versión básica para workshop. No se implementará
 - Calendario editorial de siete días con tres fechas sugeridas, nunca publicaciones programadas en una red social.
 - Una instancia local por participante, sin cuentas ni servicio compartido multiusuario.
 - Español como idioma inicial.
-- React con Vite para la interfaz; Node.js y TypeScript para el servidor.
+- Angular con Angular CLI para la interfaz; Node.js y TypeScript para el servidor.
 - Ejecución simulada disponible sin credenciales y modo real habilitado mediante configuración del servidor.
 - Datos locales y archivos de salida, sin base de datos externa ni almacenamiento en nube.
 
@@ -240,7 +240,7 @@ Skills figura como función experimental en la documentación actual. La impleme
 
 ## 10 Seguridad y privacidad
 
-- Mantener claves solo en el servidor mediante variables de entorno. No usar variables públicas de Vite para secretos.
+- Mantener claves solo en el servidor mediante variables de entorno. No usar configuración pública de Angular para secretos.
 - Incluir .env.example sin valores y excluir .env de Git y de exportaciones.
 - Vincular el servidor local a 127.0.0.1 por defecto. No exponerlo públicamente ni habilitar túneles sin una decisión separada.
 - Permitir solo los orígenes locales esperados. Validar tamaño y formato de las solicitudes.
